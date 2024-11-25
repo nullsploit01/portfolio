@@ -1,26 +1,26 @@
 import './App.css'
-import { motion } from 'motion/react'
+import { motion, useMotionValue } from 'motion/react'
+import { useEffect } from 'react'
 
 const App = () => {
+  const x = useMotionValue(0)
+
+  useEffect(() => {
+    const timeout = setTimeout(() => x.set(50), 1000)
+
+    return () => clearTimeout(timeout)
+  }, [])
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ x: x.get() }}
       transition={{
-        duration: 8,
+        duration: 0.8,
         delay: 0.5,
+        type: 'spring',
         ease: [0, 0.71, 0.2, 1.01]
       }}
     >
-      <div className="work-in-progress-container">
-        <div className="animation-wrapper">
-          {'Coming Soon'.split('').map((char, index) => (
-            <span key={index} className={`letter ${char === ' ' ? 'space' : ''}`}>
-              {char}
-            </span>
-          ))}
-        </div>
-      </div>
+      Harshal Dharmik
     </motion.div>
   )
 }
