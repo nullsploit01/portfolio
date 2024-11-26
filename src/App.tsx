@@ -20,7 +20,7 @@ const App = () => {
         ease: [0, 0.71, 0.2, 1.01]
       }}
     >
-      Harshal Dharmik
+      <p>Hello!</p>
     </motion.div>
   )
 }
