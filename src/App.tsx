@@ -1,5 +1,5 @@
 import './App.css'
-import { motion, useMotionValue } from 'motion/react'
+import { useMotionValue } from 'motion/react'
 import { useEffect } from 'react'
 
 const App = () => {
@@ -10,19 +10,7 @@ const App = () => {
 
     return () => clearTimeout(timeout)
   }, [])
-  return (
-    <motion.div
-      animate={{ x: x.get() }}
-      transition={{
-        duration: 0.8,
-        delay: 0.5,
-        type: 'spring',
-        ease: [0, 0.71, 0.2, 1.01]
-      }}
-    >
-      <p>Hello!</p>
-    </motion.div>
-  )
+  return <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">whoami</h1>
 }
 
 export default App
