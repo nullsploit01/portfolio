@@ -10,7 +10,18 @@ const App = () => {
 
     return () => clearTimeout(timeout)
   }, [])
-  return <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">whoami</h1>
+
+  return (
+    <div className="flex min-h-screen justify-center items-center flex-col">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ">
+        Harshal Dharmik
+      </h1>
+      <p>
+        Software Engineer
+        <a href="https://www.linkedin.com/company/bushel-technologies-private-limited/">@Bushel</a>
+      </p>
+    </div>
+  )
 }
 
 export default App
