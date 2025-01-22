@@ -2,6 +2,9 @@ import './App.css';
 import { useMotionValue } from 'motion/react';
 import { useEffect } from 'react';
 
+import company from '@/constants/company';
+import self from '@/constants/self';
+
 const App = () => {
   const x = useMotionValue(0);
 
@@ -14,11 +17,13 @@ const App = () => {
   return (
     <div className="flex min-h-screen justify-center items-center flex-col">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ">
-        Harshal Dharmik
+        {self.NAME}
       </h1>
       <p>
-        Software Engineer
-        <a href="https://www.linkedin.com/company/bushel-technologies-private-limited/">@Bushel</a>
+        {company.JOBTITLE}{' '}
+        <a href="https://www.linkedin.com/company/bushel-technologies-private-limited/">
+          @{company.SHORT_NAME}
+        </a>
       </p>
     </div>
   );
