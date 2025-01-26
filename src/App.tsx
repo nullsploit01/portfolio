@@ -25,6 +25,7 @@ const App = () => {
           </a>
         </Button>
       </div>
+      <h3>My Skills</h3>
     </div>
   );
 };
