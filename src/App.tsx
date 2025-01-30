@@ -40,12 +40,31 @@ const App = () => {
           threshold={0.2}
         >
           <div className="min-h-screen">
-            <h3 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-14">
+            <h3 className="scroll-m-20  mt-10 border-b pb-2 text-3xl font-semibold tracking-tight mb-14">
               My Skills
             </h3>
+            <h4 className="text-2xl">Backend Skills</h4>
             <div className="flex items-center justify-center">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {skills.BACKEND.map((tech) => (
+                  <TechBox key={tech} icon={tech} name={tech} />
+                ))}
+              </div>
+            </div>
+
+            <h4 className="text-2xl mt-10">Frontend Skills</h4>
+            <div className="flex items-center justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {skills.FRONTEND.map((tech) => (
+                  <TechBox key={tech} icon={tech} name={tech} />
+                ))}
+              </div>
+            </div>
+
+            <h4 className="text-2xl mt-10">DevOps Skills</h4>
+            <div className="flex items-center justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {skills.DEVOPS.map((tech) => (
                   <TechBox key={tech} icon={tech} name={tech} />
                 ))}
               </div>
