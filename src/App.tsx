@@ -1,4 +1,6 @@
 import './App.css';
+import TechBox from './components/custom/tech-box';
+import skills from './constants/skills';
 import { Download } from 'lucide-react';
 
 import AnimatedContent from '@/components/animated/animated-content';
@@ -37,9 +39,18 @@ const App = () => {
           scale={1.1}
           threshold={0.2}
         >
-          <h3 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-            My Skills
-          </h3>
+          <div className="min-h-screen">
+            <h3 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-14">
+              My Skills
+            </h3>
+            <div className="flex items-center justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {skills.BACKEND.map((tech) => (
+                  <TechBox key={tech} icon={tech} name={tech} />
+                ))}
+              </div>
+            </div>
+          </div>
         </AnimatedContent>
       </div>
     </div>
