@@ -41,15 +41,15 @@ const App = () => {
         >
           <div className="min-h-screen text-white px-6">
             <div className="max-w-5xl mx-auto py-12">
-              <h3 className="scroll-m-20 border-b pb-4 text-3xl font-semibold tracking-tight mb-10">
+              <h3 className="scroll-m-20 border-b pb-4 text-3xl font-semibold tracking-tight mb-10 text-center">
                 My Skills
               </h3>
 
               {/* Backend Skills */}
-              <section className="flex flex-col md:flex-row items-start">
+              <section className="flex flex-col md:flex-row items-start gap-x-10">
                 <h4 className="text-2xl font-semibold w-full md:w-1/4">Backend Skills</h4>
-                <div className="w-full md:w-2/3 flex justify-center md:justify-start">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
+                <div className="w-full md:w-3/4 flex justify-center md:justify-start">
+                  <div className="grid grid-cols-3 gap-6 w-full">
                     {skills.BACKEND.map((tech) => (
                       <TechBox key={tech.name} icon={tech.icon} name={tech.name} />
                     ))}
@@ -58,10 +58,10 @@ const App = () => {
               </section>
 
               {/* Frontend Skills */}
-              <section className="flex flex-col md:flex-row items-start mt-12">
+              <section className="flex flex-col md:flex-row items-start gap-x-10 mt-12">
                 <h4 className="text-2xl font-semibold w-full md:w-1/4">Frontend Skills</h4>
-                <div className="w-full md:w-2/3 flex justify-center md:justify-start">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
+                <div className="w-full md:w-3/4 flex justify-center md:justify-start">
+                  <div className="grid grid-cols-3 gap-6 w-full">
                     {skills.FRONTEND.map((skill) => (
                       <TechBox key={skill.name} icon={skill.icon} name={skill.name} />
                     ))}
@@ -70,10 +70,10 @@ const App = () => {
               </section>
 
               {/* DevOps Skills */}
-              <section className="flex flex-col md:flex-row items-start mt-12">
+              <section className="flex flex-col md:flex-row items-start gap-x-10 mt-12">
                 <h4 className="text-2xl font-semibold w-full md:w-1/4">DevOps Skills</h4>
-                <div className="w-full md:w-2/3 flex justify-center md:justify-start">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
+                <div className="w-full md:w-3/4 flex justify-center md:justify-start">
+                  <div className="grid grid-cols-3 gap-6 w-full">
                     {skills.DEVOPS.map((skill) => (
                       <TechBox key={skill.name} icon={skill.icon} name={skill.name} />
                     ))}
