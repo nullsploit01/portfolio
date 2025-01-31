@@ -22,7 +22,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   initialOpacity = 0,
   animateOpacity = true,
   scale = 1,
-  threshold = 0.1
+  threshold = 0.1,
 }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -38,7 +38,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
           observer.unobserve(element);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(element);
@@ -48,16 +48,16 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
 
   const directions: Record<'vertical' | 'horizontal', string> = {
     vertical: 'Y',
-    horizontal: 'X'
+    horizontal: 'X',
   };
 
   const springProps = useSpring({
     from: {
       transform: `translate${directions[direction]}(${reverse ? `-${distance}px` : `${distance}px`}) scale(${scale})`,
-      opacity: animateOpacity ? initialOpacity : 1
+      opacity: animateOpacity ? initialOpacity : 1,
     },
     to: inView ? { transform: 'translateY(0px) scale(1)', opacity: 1 } : undefined,
-    config
+    config,
   });
 
   return (

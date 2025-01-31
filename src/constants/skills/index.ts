@@ -6,29 +6,29 @@ const skills = {
   FRONTEND: [
     {
       name: 'HTML',
-      icon: FaHtml5
+      icon: FaHtml5,
     },
     {
       name: 'CSS',
-      icon: IoLogoCss3
+      icon: IoLogoCss3,
     },
     {
       name: 'JavaScript',
-      icon: IoLogoJavascript
+      icon: IoLogoJavascript,
     },
     {
       name: 'TypeScript',
-      icon: SiTypescript
+      icon: SiTypescript,
     },
     {
       name: 'React',
-      icon: IoLogoReact
+      icon: IoLogoReact,
     },
     {
       name: 'Tailwind CSS',
-      icon: SiTailwindcss
-    }
-  ]
+      icon: SiTailwindcss,
+    },
+  ],
   // BACKEND: [
   //   'Node.js',
   //   'Express',

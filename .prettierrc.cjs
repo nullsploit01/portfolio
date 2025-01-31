@@ -1,6 +1,6 @@
 module.exports = {
   semi: true,
-  trailingComma: 'none',
+  trailingComma: 'all',
   singleQuote: true,
   printWidth: 100,
   tabWidth: 2,
@@ -16,4 +16,4 @@ module.exports = {
     '@/(.*)$' // Absolute path imports
   ],
   plugins: ['@trivago/prettier-plugin-sort-imports']
-}
+};
