@@ -46,40 +46,40 @@ const App = () => {
               </h3>
 
               {/* Backend Skills */}
-              {/* <section className="flex flex-col md:flex-row items-start">
+              <section className="flex flex-col md:flex-row items-start">
                 <h4 className="text-2xl font-semibold w-full md:w-1/4">Backend Skills</h4>
                 <div className="w-full md:w-2/3 flex justify-center md:justify-start">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
                     {skills.BACKEND.map((tech) => (
-                      <TechBox key={tech} icon={tech} name={tech} />
-                    ))}
-                  </div>
-                </div>
-              </section> */}
-
-              {/* Frontend Skills */}
-              <section className="flex flex-col md:flex-row items-start mt-12">
-                <h4 className="text-2xl font-semibold w-full md:w-1/4">Frontend Skills</h4>
-                <div className="w-full md:w-2/3 flex justify-center md:justify-start">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
-                    {skills.FRONTEND.map((tech) => (
                       <TechBox key={tech.name} icon={tech.icon} name={tech.name} />
                     ))}
                   </div>
                 </div>
               </section>
 
-              {/* DevOps Skills */}
-              {/* <section className="flex flex-col md:flex-row items-start mt-12">
-                <h4 className="text-2xl font-semibold w-full md:w-1/4">DevOps Skills</h4>
+              {/* Frontend Skills */}
+              <section className="flex flex-col md:flex-row items-start mt-12">
+                <h4 className="text-2xl font-semibold w-full md:w-1/4">Frontend Skills</h4>
                 <div className="w-full md:w-2/3 flex justify-center md:justify-start">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
-                    {skills.DEVOPS.map((tech) => (
-                      <TechBox key={tech} icon={tech} name={tech} />
+                    {skills.FRONTEND.map((skill) => (
+                      <TechBox key={skill.name} icon={skill.icon} name={skill.name} />
                     ))}
                   </div>
                 </div>
-              </section> */}
+              </section>
+
+              {/* DevOps Skills */}
+              <section className="flex flex-col md:flex-row items-start mt-12">
+                <h4 className="text-2xl font-semibold w-full md:w-1/4">DevOps Skills</h4>
+                <div className="w-full md:w-2/3 flex justify-center md:justify-start">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
+                    {skills.DEVOPS.map((skill) => (
+                      <TechBox key={skill.name} icon={skill.icon} name={skill.name} />
+                    ))}
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </AnimatedContent>
