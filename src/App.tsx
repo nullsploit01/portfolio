@@ -29,23 +29,22 @@ const App = () => {
         </Button>
       </div>
       <div>
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={true}
-          config={{ tension: 80, friction: 20 }}
-          initialOpacity={0.2}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-        >
-          <div className="min-h-screen text-white px-4 sm:px-6">
-            <div className="max-w-5xl mx-auto py-12">
-              <h3 className="scroll-m-20 border-b pb-4 text-3xl font-semibold tracking-tight mb-10 text-center">
-                My Skills
-              </h3>
+        <div className="min-h-screen text-white px-4 sm:px-6">
+          <div className="max-w-5xl mx-auto py-12">
+            <h3 className="scroll-m-20 border-b pb-4 text-3xl font-semibold tracking-tight mb-10">
+              My Skills
+            </h3>
 
-              {/* Backend Skills */}
+            {/* Backend Skills */}
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              config={{ tension: 80, friction: 20 }}
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+            >
               <section className="flex flex-col md:flex-row items-start gap-x-6 sm:gap-x-10">
                 <h4 className="text-2xl font-semibold w-full md:w-1/4 mb-4 md:mb-0">
                   Backend Skills
@@ -58,7 +57,17 @@ const App = () => {
                   </div>
                 </div>
               </section>
+            </AnimatedContent>
 
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              config={{ tension: 80, friction: 20 }}
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+            >
               {/* Frontend Skills */}
               <section className="flex flex-col md:flex-row items-start gap-x-6 sm:gap-x-10 mt-12">
                 <h4 className="text-2xl font-semibold w-full md:w-1/4 mb-4 md:mb-0">
@@ -72,7 +81,17 @@ const App = () => {
                   </div>
                 </div>
               </section>
+            </AnimatedContent>
 
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              config={{ tension: 80, friction: 20 }}
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+            >
               {/* DevOps Skills */}
               <section className="flex flex-col md:flex-row items-start gap-x-6 sm:gap-x-10 mt-12">
                 <h4 className="text-2xl font-semibold w-full md:w-1/4 mb-4 md:mb-0">
@@ -86,9 +105,9 @@ const App = () => {
                   </div>
                 </div>
               </section>
-            </div>
+            </AnimatedContent>
           </div>
-        </AnimatedContent>
+        </div>
       </div>
     </div>
   );
