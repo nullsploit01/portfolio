@@ -12,10 +12,10 @@ const App = () => {
   return (
     <div className="mx-8">
       <div className="flex min-h-screen justify-center items-center flex-col">
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ">
+        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl permanent-marker-regular">
           {self.NAME}
         </h1>
-        <p>
+        <p className="kalam-regular text-xl mt-3">
           {company.JOBTITLE}{' '}
           <a href="https://www.linkedin.com/company/bushel-technologies-private-limited/">
             @{company.SHORT_NAME}
