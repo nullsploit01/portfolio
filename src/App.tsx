@@ -1,4 +1,5 @@
 import './App.css';
+import NavBar from './components/custom/navbar';
 import TechBox from './components/custom/tech-box';
 import skills from './constants/skills';
 import { Download } from 'lucide-react';
@@ -11,7 +12,8 @@ import self from '@/constants/self';
 const App = () => {
   return (
     <div className="mx-8">
-      <div className="flex min-h-screen justify-center items-center flex-col">
+      <NavBar />
+      <div className="min-h-screen flex justify-center items-center flex-col">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl permanent-marker-regular">
           {self.NAME}
         </h1>
