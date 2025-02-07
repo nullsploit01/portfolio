@@ -1,4 +1,3 @@
-import './App.css';
 import { Download } from 'lucide-react';
 
 import AnimatedContent from '@/components/animated/animated-content';
