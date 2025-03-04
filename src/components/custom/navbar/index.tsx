@@ -14,7 +14,7 @@ const NavBar = () => {
           Home
         </p>
       </div>
-      <div>
+      {/* <div>
         <p
           onClick={() => {
             navigate('/blogs');
@@ -23,7 +23,7 @@ const NavBar = () => {
         >
           Blogs
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
