@@ -1,5 +1,5 @@
 export type IProject = {
-  id: string;
+  id: number;
   documentId: string;
   name: string;
   createdAt: string;
