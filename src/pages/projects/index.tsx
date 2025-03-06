@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import ProjectCard from '@/components/custom/project-card';
 import { IProject } from '@/models/project';
 
 const ProjectsPage = () => {
@@ -18,17 +19,15 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Projects</h1>
+    <div className="flex flex-wrap justify-center">
       {projects.length > 0 ? (
-        projects.map((project) => (
-          <div key={project.id}>
-            <h2>{project.name}</h2>
-            <p>{project.description}</p>
-            <small>Published on: {new Date(project.publishedAt).toLocaleDateString()}</small>
-            <img width={300} height={400} src={project.image ?? ''} alt="image" />
-          </div>
-        ))
+        projects.map((project) => {
+          return (
+            <div className="my-5">
+              <ProjectCard key={project.id} project={project} />
+            </div>
+          );
+        })
       ) : (
         <p>Loading...</p>
       )}
