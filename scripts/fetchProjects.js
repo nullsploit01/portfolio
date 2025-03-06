@@ -9,6 +9,22 @@ const __dirname = path.dirname(__filename);
 
 dotenv.config({ path: '.env.local' });
 
+async function fetchImageAsBase64(imageUrl) {
+  try {
+    const response = await axios.get(`${process.env.STRAPI_SERVER_URL}${imageUrl}`, {
+      responseType: 'arraybuffer',
+    });
+
+    const base64String = Buffer.from(response.data, 'binary').toString('base64');
+    const mimeType = imageUrl.split('.').pop();
+
+    return `data:image/${mimeType};base64,${base64String}`;
+  } catch (error) {
+    console.error('Error fetching image:', imageUrl, error);
+    return null;
+  }
+}
+
 async function fetchAllProjects() {
   let allProjects = [];
   let page = 1;
@@ -23,6 +39,7 @@ async function fetchAllProjects() {
         params: {
           'pagination[page]': page,
           'pagination[pageSize]': pageSize,
+          populate: 'image',
         },
         headers: {
           Authorization: `Bearer ${process.env.STRAPI_ACCESS_TOKEN}`,
@@ -34,6 +51,12 @@ async function fetchAllProjects() {
       if (!data.length) {
         console.log('No more projects to fetch.');
         break;
+      }
+
+      for (const project of data) {
+        if (project.image && project.image.url) {
+          project.image = await fetchImageAsBase64(project.image.url);
+        }
       }
 
       allProjects = allProjects.concat(data);
@@ -51,7 +74,7 @@ async function fetchAllProjects() {
     await fs.writeFile(outputPath, JSON.stringify(allProjects, null, 2), 'utf-8');
     console.log(`Projects saved successfully to ${outputPath}`);
   } catch (error) {
-    console.error('Error fetching projects:', error.message);
+    console.error('Error fetching projects:', error);
 
     if (error.response) {
       console.error('Response data:', error.response.data);
