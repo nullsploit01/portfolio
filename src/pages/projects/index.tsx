@@ -8,6 +8,9 @@ const ProjectsPage = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       const data = await import('@/data/projects.json');
+      data.default.sort(
+        (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+      );
       setProjects(data.default);
     };
 
