@@ -1,0 +1,110 @@
+[
+  {
+    "id": 9,
+    "documentId": "vb4v61js4jctdv3c8fi76fw8",
+    "name": "Catalog Digitization",
+    "createdAt": "2025-03-06T02:39:15.059Z",
+    "updatedAt": "2025-03-06T02:42:40.033Z",
+    "publishedAt": "2025-03-06T02:42:40.089Z",
+    "description": "Catalog Digitization is a web application developed to streamline the creation of e-commerce catalogs for sellers. Leveraging AI, it captures user voice input to automatically populate product details, simplifying the cataloging process. Built with React JS, Express JS, and OpenAI technologies, this project was created for the Build for Bharat Hackathon",
+    "url": null,
+    "githubLink": "https://github.com/nullsploit01/catalog-digitization",
+    "tags": "NodeJs,ReactJs,OpenAI,Hackathon"
+  },
+  {
+    "id": 5,
+    "documentId": "rqrje0to61avzret0j16kt2t",
+    "name": "PseudoTest",
+    "createdAt": "2025-03-06T02:29:56.913Z",
+    "updatedAt": "2025-03-06T02:34:44.312Z",
+    "publishedAt": "2025-03-06T02:34:44.372Z",
+    "description": "PseudoTest is an AI-powered exam prep platform that helps students practice for competitive exams like IBPS and RRB. It generates mock tests, evaluates answers, and provides feedback. In its MVP stage, 100 users tested the platform, benefiting from AI-driven question generation and assessment.",
+    "url": null,
+    "githubLink": "https://github.com/Anexca/project-kota",
+    "tags": "Golang,React.Js,Docker,VertexAi,Google Cloud,Firebase,Supabase"
+  },
+  {
+    "id": 13,
+    "documentId": "ma7vdwk2qc6zx4juc5yxy83r",
+    "name": "Utils",
+    "createdAt": "2025-03-06T02:48:37.434Z",
+    "updatedAt": "2025-03-06T02:49:51.705Z",
+    "publishedAt": "2025-03-06T02:49:51.753Z",
+    "description": "utils is an open-source utility library that I contributed to, providing commonly used functions like random number generation, unique array filtering, and object grouping. It helps streamline coding tasks and improves efficiency across projects.",
+    "url": "https://www.npmjs.com/package/@teteu/utils",
+    "githubLink": "https://github.com/nullsploit01/utils",
+    "tags": "Typescript,OpenSource"
+  },
+  {
+    "id": 15,
+    "documentId": "che8n16wgu7glw3n3fz6fsj2",
+    "name": "Wallet",
+    "createdAt": "2025-03-06T02:51:14.120Z",
+    "updatedAt": "2025-03-06T02:54:25.508Z",
+    "publishedAt": "2025-03-06T02:54:25.539Z",
+    "description": "Wallet is a secure mobile application I developed and use daily to manage my credit and debit card information. Built with Expo, it encrypts and stores card details locally, ensuring data security. The app features local data storage, mobile lock authentication, and the ability to add, edit, and copy card details. ",
+    "url": null,
+    "githubLink": "https://github.com/nullsploit01/wallet",
+    "tags": "Expo,ReactJs,Golang,Security"
+  },
+  {
+    "id": 7,
+    "documentId": "qvbdzku2kkhfvupz9u7g2vfn",
+    "name": "Coding Challenges",
+    "createdAt": "2025-03-06T02:35:33.807Z",
+    "updatedAt": "2025-03-06T02:38:01.534Z",
+    "publishedAt": "2025-03-06T02:38:01.575Z",
+    "description": "CC (Coding Challenges) is a collection of custom implementations of various coding problems from CodingChallenges.fyi. It includes tools like a Unix-style wc command and a JSON parser, focusing on practical problem-solving and efficient coding solutions",
+    "url": null,
+    "githubLink": "https://github.com/nullsploit01/cc",
+    "tags": "Golang"
+  },
+  {
+    "id": 11,
+    "documentId": "couuna0al3uxz8gvrtqe8g31",
+    "name": "Reverse Shell Generator",
+    "createdAt": "2025-03-06T02:43:43.425Z",
+    "updatedAt": "2025-03-06T02:45:42.898Z",
+    "publishedAt": "2025-03-06T02:45:42.950Z",
+    "description": "Reverse Shell Generator is a web tool that helps security professionals create reverse shell commands easily. Users can enter their IP and port to generate ready-to-use payloads for different operating systems and shell types. It simplifies penetration testing by providing quick, customizable, and encoded shell commands.",
+    "url": "https://revshells.nullsploit.in/",
+    "githubLink": "https://github.com/nullsploit01/reverse-shell-generator",
+    "tags": "ReactJs,Security,Pentesting"
+  },
+  {
+    "id": 17,
+    "documentId": "og50q050hyelxa1f1pqukode",
+    "name": "RAGTube",
+    "createdAt": "2025-03-06T03:00:28.064Z",
+    "updatedAt": "2025-03-06T03:00:52.692Z",
+    "publishedAt": "2025-03-06T03:00:52.720Z",
+    "description": "RAGTube is an AI-powered tool I built to answer questions from YouTube videos. It extracts transcripts, stores them in a vector database, and uses RAG (Retrieval-Augmented Generation) to provide accurate responses. It helps quickly find relevant information from videos.",
+    "url": null,
+    "githubLink": "https://github.com/nullsploit01/ragtube",
+    "tags": "OpenAI,RAG,Python,PGVector"
+  },
+  {
+    "id": 20,
+    "documentId": "q0m3bqd483p1xxv8w3w1z0cq",
+    "name": "CashSync",
+    "createdAt": "2025-03-06T03:27:33.919Z",
+    "updatedAt": "2025-03-06T03:35:01.434Z",
+    "publishedAt": "2025-03-06T03:35:01.480Z",
+    "description": "CashSync is a finance tracking app I built to manage expenses across multiple clients efficiently. It supports user authentication, multiple expense books, and real-time sync to keep records up-to-date. Built with Golang, Firestore, and React Native, it helps streamline financial management on the go.",
+    "url": null,
+    "githubLink": "https://github.com/nullsploit01/cash-sync",
+    "tags": "Expo,Golang,Firebase,ReactJs"
+  },
+  {
+    "id": 22,
+    "documentId": "lt6f5lixvl6vh2cn2j34hvig",
+    "name": "Redis",
+    "createdAt": "2025-03-06T03:36:41.720Z",
+    "updatedAt": "2025-03-06T03:37:45.630Z",
+    "publishedAt": "2025-03-06T03:37:45.656Z",
+    "description": "Redis is a command-line interface I developed to manage a custom Redis server. It allows interactive execution of Redis commands like SET, GET, DEL, PING, and ECHO, communicating via the RESP protocol for compatibility with standard Redis clients. The server supports custom configurations for port and host settings, and is optimized for high throughput, achieving over 200,000 requests per second in benchmark tests for SET and GET commands.",
+    "url": null,
+    "githubLink": "https://github.com/nullsploit01/cc-redis",
+    "tags": "Golang,Redis"
+  }
+]

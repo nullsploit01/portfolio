@@ -13,7 +13,7 @@ async function fetchAllBlogs() {
   let allBlogs = [];
   let page = 1;
   const pageSize = 100;
-  const outputPath = path.resolve(__dirname, '../data/blogs.json');
+  const outputPath = path.resolve(__dirname, '../src/data/blogs.json');
 
   try {
     console.log('Starting to fetch blogs from Strapi server...');
@@ -22,11 +22,11 @@ async function fetchAllBlogs() {
       const response = await axios.get(`${process.env.STRAPI_SERVER_URL}/api/blogs`, {
         params: {
           'pagination[page]': page,
-          'pagination[pageSize]': pageSize
+          'pagination[pageSize]': pageSize,
         },
         headers: {
-          Authorization: `Bearer ${process.env.STRAPI_ACCESS_TOKEN}`
-        }
+          Authorization: `Bearer ${process.env.STRAPI_ACCESS_TOKEN}`,
+        },
       });
 
       const { data, meta } = response.data;
