@@ -20,6 +20,10 @@ const ProjectsPage = () => {
 
   return (
     <div className="flex flex-wrap justify-center">
+      {/* <div>
+        <h3>Projects</h3>
+      </div> */}
+
       {projects.length > 0 ? (
         projects.map((project) => {
           return (

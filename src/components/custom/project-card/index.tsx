@@ -5,10 +5,10 @@ import { IProject } from '@/models/project';
 
 const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-lg p-5 flex gap-6 max-w-2xl transition-all duration-300 hover:shadow-xl hover:scale-105">
-      <div className="w-2/5 flex items-center justify-center relative">
+    <div className="bg-gray-900 text-white rounded-xl shadow-lg p-5 flex flex-col md:flex-row gap-6 max-w-2xl transition-all duration-300 hover:shadow-xl hover:scale-105">
+      <div className="w-full md:w-2/5 flex items-center justify-center relative">
         {project.image ? (
-          <div className="relative">
+          <div className="relative w-full">
             <img
               src={project.image}
               alt={project.name}
@@ -27,11 +27,11 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
         )}
       </div>
 
-      <div className="w-3/5">
+      <div className="w-full md:w-3/5 flex flex-col text-center md:text-left">
         <h3 className="text-lg font-semibold">{project.name}</h3>
         <p className="text-gray-400 text-sm mt-2 line-clamp-3">{project.description}</p>
 
-        <div className="flex flex-wrap gap-2 mt-4">
+        <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
           {project.tags?.split(',').map((tag, index) => (
             <span key={index} className="bg-gray-800 text-gray-300 px-2 py-1 text-xs rounded-md">
               {tag.trim()}
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
           ))}
         </div>
 
-        <div className="mt-5 flex gap-4">
+        <div className="mt-5 flex gap-4 justify-center md:justify-start">
           {project.githubLink && (
             <a
               href={project.githubLink}
