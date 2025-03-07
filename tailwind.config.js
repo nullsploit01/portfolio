@@ -7,10 +7,16 @@ module.exports = {
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        sm: 'calc(var(--radius) - 4px)',
       },
-      colors: {}
-    }
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+        quicksand: ['Quicksand', 'sans-serif'],
+      },
+      colors: {},
+    },
   },
-  plugins: [require('tailwindcss-animate')]
-}
+  plugins: [require('tailwindcss-animate')],
+};
