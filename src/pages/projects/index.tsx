@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import NavBar from '@/components/custom/navbar';
@@ -22,21 +23,25 @@ const ProjectsPage = () => {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-wrap justify-center">
-        {/* <div>
-        <h3>Projects</h3>
-      </div> */}
 
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="text-4xl font-semibold text-gray-200 text-center mt-10 mb-6"
+      >
+        Projects I’ve Built
+      </motion.h2>
+
+      <div className="flex flex-col items-center justify-center min-h-screen w-full max-w-[900px] mx-auto">
         {projects.length > 0 ? (
-          projects.map((project) => {
-            return (
-              <div className="my-5">
-                <ProjectCard key={project.id} project={project} />
-              </div>
-            );
-          })
+          projects.map((project) => (
+            <div key={project.id} className="w-full flex justify-center my-5">
+              <ProjectCard project={project} />
+            </div>
+          ))
         ) : (
-          <p>Loading...</p>
+          <p className="text-center text-gray-400">Loading...</p>
         )}
       </div>
     </div>
