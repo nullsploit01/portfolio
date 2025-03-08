@@ -9,7 +9,7 @@ import self from '@/constants/self';
 
 const HomePage = () => {
   return (
-    <div className="mx-8">
+    <div>
       <NavBar />
       <div className="min-h-screen flex justify-center items-center flex-col text-center px-4 overflow-hidden">
         <motion.div
@@ -23,7 +23,7 @@ const HomePage = () => {
           <p className="kalam-regular text-xl mt-3 text-gray-400">
             {company.JOBTITLE}{' '}
             <a
-              href="https://www.linkedin.com/company/bushel-technologies-private-limited/"
+              href={company.LINKEDIN}
               className="text-cyan-400 hover:text-cyan-300"
               target="_blank"
               rel="noopener noreferrer"

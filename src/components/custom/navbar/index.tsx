@@ -1,50 +1,40 @@
-import { useNavigate } from 'react-router';
+import { motion } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const navItems = [
+    { label: 'Home', path: '/' },
+    { label: 'Projects', path: '/projects' },
+    { label: 'About', path: '/about' },
+  ];
+
   return (
-    <div className="flex justify-center place-content-center mt-5">
-      <div>
-        <p
-          onClick={() => {
-            navigate('/');
-          }}
-          className="mx-4 p-1 cursor-pointer hover:bg-slate-500 rounded-sm"
-        >
-          Home
-        </p>
+    <nav className="flex justify-center mt-5">
+      <div className="flex relative bg-[#222222] p-2 rounded-full shadow-xl">
+        {navItems.map((item) => {
+          const isActive = pathname === item.path;
+          return (
+            <button
+              key={item.path}
+              onClick={() => navigate(item.path)}
+              className="relative px-8 py-3 rounded-full text-md font-semibold text-gray-200 hover:text-white transition"
+            >
+              {isActive && (
+                <motion.span
+                  layoutId="active-pill"
+                  className="absolute inset-0 bg-gray-700 rounded-full shadow-lg"
+                  transition={{ type: 'spring', duration: 0.6 }}
+                />
+              )}
+              <span className="relative z-10">{item.label}</span>
+            </button>
+          );
+        })}
       </div>
-      <div>
-        <p
-          onClick={() => {
-            navigate('/projects');
-          }}
-          className="mx-4 p-1 cursor-pointer hover:bg-slate-500 rounded-sm"
-        >
-          Projects
-        </p>
-      </div>
-      <div>
-        <p
-          onClick={() => {
-            navigate('/about');
-          }}
-          className="mx-4 p-1 cursor-pointer hover:bg-slate-500 rounded-sm"
-        >
-          About
-        </p>
-      </div>
-      {/* <div>
-        <p
-          onClick={() => {
-            navigate('/blogs');
-          }}
-          className="mx-4 p-1 cursor-pointer hover:bg-slate-500 rounded-sm"
-        >
-          Blogs
-        </p>
-      </div> */}
-    </div>
+    </nav>
   );
 };
 
