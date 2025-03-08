@@ -24,6 +24,16 @@ const NavBar = () => {
           Projects
         </p>
       </div>
+      <div>
+        <p
+          onClick={() => {
+            navigate('/about');
+          }}
+          className="mx-4 p-1 cursor-pointer hover:bg-slate-500 rounded-sm"
+        >
+          About
+        </p>
+      </div>
       {/* <div>
         <p
           onClick={() => {
