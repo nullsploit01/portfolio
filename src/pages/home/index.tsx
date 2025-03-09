@@ -2,6 +2,7 @@ import SkillsSection from './skills';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 
+import Footer from '@/components/custom/footer';
 import NavBar from '@/components/custom/navbar';
 import { Button } from '@/components/ui/button';
 import company from '@/constants/company';
@@ -44,6 +45,7 @@ const HomePage = () => {
       <div>
         <SkillsSection />
       </div>
+      <Footer />
     </div>
   );
 };
