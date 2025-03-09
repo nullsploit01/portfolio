@@ -2,16 +2,14 @@ import SkillsSection from './skills';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 
-import Footer from '@/components/custom/footer';
-import NavBar from '@/components/custom/navbar';
+import Layout from '@/components/custom/layout';
 import { Button } from '@/components/ui/button';
 import company from '@/constants/company';
 import self from '@/constants/self';
 
 const HomePage = () => {
   return (
-    <div>
-      <NavBar />
+    <Layout>
       <div className="min-h-screen flex justify-center items-center flex-col text-center px-4 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -45,8 +43,7 @@ const HomePage = () => {
       <div>
         <SkillsSection />
       </div>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

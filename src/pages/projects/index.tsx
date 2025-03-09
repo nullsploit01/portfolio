@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import NavBar from '@/components/custom/navbar';
+import Layout from '@/components/custom/layout';
 import ProjectCard from '@/components/custom/project-card';
 import { IProject } from '@/models/project';
 
@@ -21,9 +21,7 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <div>
-      <NavBar />
-
+    <Layout>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,7 +31,7 @@ const ProjectsPage = () => {
         Projects I’ve Built
       </motion.h2>
 
-      <div className="flex flex-col items-center justify-center min-h-screen w-full max-w-[900px] mx-auto">
+      <div className="flex my-8 flex-col items-center justify-center min-h-screen w-full max-w-[900px] mx-auto">
         {projects.length > 0 ? (
           projects.map((project) => (
             <div key={project.id} className="w-full flex justify-center my-5">
@@ -44,7 +42,7 @@ const ProjectsPage = () => {
           <p className="text-center text-gray-400">Loading...</p>
         )}
       </div>
-    </div>
+    </Layout>
   );
 };
 

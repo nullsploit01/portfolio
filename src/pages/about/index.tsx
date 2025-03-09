@@ -1,13 +1,12 @@
 import Experience from './experience';
 import { motion } from 'framer-motion';
 
-import NavBar from '@/components/custom/navbar';
+import Layout from '@/components/custom/layout';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen ">
-      <NavBar />
-      <section className="max-w-4xl mx-auto px-6 sm:px-12 py-20">
+    <Layout>
+      <section className="max-w-4xl mx-auto px-6 sm:px-12 py-10">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,7 +24,7 @@ const AboutPage = () => {
           <Experience />
         </div>
       </section>
-    </div>
+    </Layout>
   );
 };
 
