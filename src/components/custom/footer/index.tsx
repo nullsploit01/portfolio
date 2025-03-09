@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+
+import self from '@/constants/self';
 
 const socials = [
-  { icon: FaGithub, link: 'https://github.com/YOUR_GITHUB' },
-  { icon: FaLinkedin, link: 'https://linkedin.com/in/YOUR_LINKEDIN' },
-  { icon: FaTwitter, link: 'https://twitter.com/YOUR_TWITTER' },
+  { icon: FaGithub, link: self.GITHUB },
+  { icon: FaLinkedin, link: self.LINKEDIN },
+  { icon: FaTwitter, link: self.X },
+  { icon: FaEnvelope, link: `mailto:${self.EMAIL}` },
 ];
 
 const Footer = () => {
