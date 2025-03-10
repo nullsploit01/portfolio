@@ -1,12 +1,15 @@
 import './App.css';
 import RoutesConfig from './lib/routes';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <RoutesConfig />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <RoutesConfig />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 };
 

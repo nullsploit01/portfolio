@@ -10,7 +10,7 @@ import self from '@/constants/self';
 const HomePage = () => {
   return (
     <Layout>
-      <div className="min-h-screen flex justify-center items-center flex-col text-center px-4 overflow-hidden">
+      <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -39,10 +39,10 @@ const HomePage = () => {
             </Button>
           </div>
         </motion.div>
-      </div>
-      <div>
+      </header>
+      <main>
         <SkillsSection />
-      </div>
+      </main>
     </Layout>
   );
 };
