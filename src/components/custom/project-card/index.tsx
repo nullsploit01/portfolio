@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
@@ -8,11 +9,22 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <article
-      className="bg-gray-900 text-white rounded-xl shadow-lg p-5 flex flex-col md:flex-row gap-6 max-w-2xl transition-all duration-300 hover:shadow-xl hover:scale-105"
+    <motion.article
+      className="bg-gradient-to-b from-[#171717] to-[#252525] border border-gray-800 text-gray-300 rounded-xl shadow-lg p-5 flex flex-col md:flex-row gap-6 max-w-2xl transition-all duration-300"
       onClick={() => setExpanded(!expanded)}
       role="button"
       aria-expanded={expanded}
+      whileHover={{
+        scale: 1.05,
+        rotateY: 5,
+        boxShadow: '0px 15px 30px rgba(0, 255, 255, 0.2)',
+      }}
+      whileTap={{
+        scale: 0.97,
+        rotateY: 0,
+        boxShadow: '0px 8px 20px rgba(0, 255, 255, 0.2)',
+      }}
+      transition={{ type: 'spring', stiffness: 200, damping: 15 }}
     >
       <header className="w-full md:w-2/5 flex items-center justify-center relative">
         {project.image ? (
@@ -22,9 +34,9 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
             alt={`Screenshot of ${project.name}`}
             className="rounded-lg object-cover w-full h-auto shadow-xl"
             style={{
-              boxShadow: '0 10px 20px rgba(0,0,0,0.3)',
+              boxShadow: '0 10px 20px rgba(0, 255, 255, 0.1)',
               transform: 'translateY(-5px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.05)',
             }}
           />
         ) : (
@@ -38,7 +50,7 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
       </header>
 
       <section className="w-full md:w-3/5 flex flex-col text-center md:text-left">
-        <h3 className="text-lg font-semibold">{project.name}</h3>
+        <h3 className="text-lg font-semibold text-white">{project.name}</h3>
         <p
           className={`text-gray-400 text-sm mt-2 transition-all duration-300 ${
             expanded ? '' : 'line-clamp-3'
@@ -65,7 +77,7 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="text-gray-400 hover:text-white transition transform hover:scale-110"
+              className="text-gray-400 hover:text-cyan-400 transition transform hover:scale-110"
               aria-label={`View ${project.name} on GitHub`}
               onClick={(e) => e.stopPropagation()}
             >
@@ -78,7 +90,7 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="text-gray-400 hover:text-white transition transform hover:scale-110"
+              className="text-gray-400 hover:text-cyan-400 transition transform hover:scale-110"
               aria-label={`Visit ${project.name} live demo`}
               onClick={(e) => e.stopPropagation()}
             >
@@ -104,7 +116,7 @@ const ProjectCard: React.FC<{ project: IProject }> = ({ project }) => {
           operatingSystem: 'All',
         })}
       </script>
-    </article>
+    </motion.article>
   );
 };
 
