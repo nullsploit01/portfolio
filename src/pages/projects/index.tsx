@@ -22,26 +22,49 @@ const ProjectsPage = () => {
 
   return (
     <Layout>
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="text-4xl font-semibold text-gray-200 text-center mt-10 mb-6"
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.8, ease: 'easeOut' } }}
+        className="max-w-4xl mx-auto px-6 sm:px-12 py-12"
+        aria-labelledby="projects-heading"
       >
-        Projects I’ve Built
-      </motion.h2>
+        <h2
+          id="projects-heading"
+          className="text-4xl font-semibold text-gray-200 text-center mb-10"
+        >
+          Projects I’ve Built
+        </h2>
 
-      <div className="flex my-8 flex-col items-center justify-center min-h-screen w-full max-w-[900px] mx-auto">
-        {projects.length > 0 ? (
-          projects.map((project) => (
-            <div key={project.id} className="w-full flex justify-center my-5">
-              <ProjectCard project={project} />
-            </div>
-          ))
-        ) : (
-          <p className="text-center text-gray-400">Loading...</p>
-        )}
-      </div>
+        <motion.div
+          className="flex flex-col items-center justify-center w-full"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 },
+            },
+          }}
+        >
+          {projects.length > 0 ? (
+            projects.map((project) => (
+              <motion.div
+                key={project.id}
+                className="w-full flex justify-center my-5"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            ))
+          ) : (
+            <p className="text-center text-gray-400">Loading...</p>
+          )}
+        </motion.div>
+      </motion.section>
     </Layout>
   );
 };
