@@ -6,12 +6,21 @@ import skills from '@/constants/skills';
 
 const SkillsSection: React.FC = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 }); // Triggers when 20% is visible
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <div ref={ref} className="min-h-screen text-white px-6 sm:px-12 py-16">
+    <motion.section
+      ref={ref}
+      className="min-h-screen text-white px-6 sm:px-12 py-16"
+      aria-labelledby="skills-heading"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1, transition: { duration: 0.6 } } : {}}
+    >
       <div className="max-w-5xl mx-auto">
-        <h3 className="scroll-m-20 border-b border-gray-600/50 pb-4 text-3xl font-semibold tracking-wide mb-10 text-center text-gray-200 font-nunito">
+        <h3
+          id="skills-heading"
+          className="scroll-m-20 border-b border-gray-600/50 pb-4 text-3xl font-semibold tracking-wide mb-10 text-center text-gray-200 font-nunito"
+        >
           What I Work With
         </h3>
 
@@ -27,6 +36,7 @@ const SkillsSection: React.FC = () => {
                 transition: { staggerChildren: 0.15 },
               },
             }}
+            aria-label="Skills and Technologies"
           >
             {skills.map((tech) => (
               <motion.div
@@ -42,7 +52,7 @@ const SkillsSection: React.FC = () => {
           </motion.div>
         )}
       </div>
-    </div>
+    </motion.section>
   );
 };
 
