@@ -18,10 +18,10 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Separate vendor code
+            return 'vendor';
           }
-          if (id.includes('data')) {
-            return 'data-chunk'; // Separate the large 'data' chunk
+          if (id.includes('projects.json')) {
+            return 'projects-chunk';
           }
         },
       },
