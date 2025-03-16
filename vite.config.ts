@@ -13,4 +13,18 @@ export default defineConfig({
   server: {
     allowedHosts: true,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'; // Separate vendor code
+          }
+          if (id.includes('data')) {
+            return 'data-chunk'; // Separate the large 'data' chunk
+          }
+        },
+      },
+    },
+  },
 });
