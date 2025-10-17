@@ -1,9 +1,6 @@
-import SkillsSection from './skills';
 import { motion } from 'framer-motion';
-import { Download } from 'lucide-react';
 
 import Layout from '@/components/custom/layout';
-import { Button } from '@/components/ui/button';
 import company from '@/constants/company';
 import self from '@/constants/self';
 
@@ -30,19 +27,8 @@ const HomePage = () => {
               @{company.SHORT_NAME}
             </a>
           </p>
-          <div className="mt-4">
-            <Button asChild size="lg" variant="ghost">
-              <a target="_blank" href={self.RESUME}>
-                <Download className="mr-2" />
-                Resume
-              </a>
-            </Button>
-          </div>
         </motion.div>
       </header>
-      <main>
-        <SkillsSection />
-      </main>
     </Layout>
   );
 };
