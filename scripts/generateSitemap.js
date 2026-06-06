@@ -3,7 +3,7 @@ import { dirname, join } from 'path';
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { fileURLToPath } from 'url';
 
-const BASE_URL = 'https://nullsploit.in';
+const BASE_URL = 'https://nullsploit.dev';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
